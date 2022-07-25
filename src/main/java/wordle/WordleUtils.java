@@ -84,8 +84,8 @@ public class WordleUtils {
                 .map(GuessResult::parseGuessResult)
                 .toArray(GuessResult[]::new);
             possibilities = filterGuesses(possibilities, guessResults);
-            System.out.println(possibilities.length);
-            System.out.println(Arrays.toString(possibilities));
+            Tuple<String, Double>[] bestGuesses = AIUtils.getBestGuessList(possibilities, false);
+            System.out.println(Arrays.toString(bestGuesses));
         } catch (Exception e) {
             e.printStackTrace();
         }
