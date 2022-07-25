@@ -1,0 +1,34 @@
+plugins {
+    id 'java'
+    id 'java-library'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    google()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    api 'org.seleniumhq.selenium:selenium-java:2.41.0'
+}
+
+defaultTasks 'build'
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'wordle.Main'
+}
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'wordle.Main'
+        )
+    }
+}
