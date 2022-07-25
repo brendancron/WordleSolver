@@ -2,7 +2,7 @@
 ## Run Wordle
 The basic run command is ``./gradlew run --args="wordle <args>"`` where args are your guesses.
 For example if you score this on the wordle:
-![wordle guess image](https://github.com/brendancron/WordleSolver/blob/main/misc/blend.png)
+<img src="https://github.com/brendancron/WordleSolver/blob/main/misc/blend.png" width="200" height="200" />
 Your command would be: ``./gradlew run --args="wordle b0l2e1n0d0"`` The 0 means that the letter does not exist (different if multiple), 1 means the letter is in the wrong spot and 2 means the letter is correctly placed.
 This command will provide the following output after you run it: 
 ``[<word, score>, ...]`` in order of the guesses with the most "entropy". For this example it suggests that you guess slake next.
